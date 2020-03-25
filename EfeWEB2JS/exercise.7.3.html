@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wordnumber {
+            text-shadow: black;
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>Write here: <textarea id="words" rows="5" cols="60"> </textarea></p>
+    <p>Wordcount : <span id="wordnumber"></span></p>
+
+    <script>
+        var inputword = document.getElementById("words");
+        inputword.onkeyup = function () {
+            var myValue = document.getElementById("words").value;
+            var spl = myValue.split(" ");
+            var i = 0;
+            var sum = 0;
+            while (i < spl.length) {
+                if (spl[i] != "") {
+                    sum = sum + 1;
+                }
+                i = i + 1;
+            }
+            document.getElementById("wordnumber").innerHTML = sum;
+            console.log(i, sum, spl, spl.length);
+        }
+    </script>
+
+    <!-- <h3> Word counter </h3>
+    <textarea id="myWordsToCount" rows="5" cols="60"></textarea><br>
+    The wordcount is: <span id="wordcount"></span><br>
+
+    <script>
+        var myTextareaElement = document.getElementById("myWordsToCount");
+        myTextareaElement.onkeyup = function () {
+            var i = 0;
+            sum = 0;
+            var myValue = document.getElementById("myWordsToCount").value;
+            var res = myValue.split(" ");
+            while (i < res.length) {
+                /* The variable sum increases if the inserted character is not the white space*/
+                if (res[i] != "") {
+                    sum = sum + 1;
+                }
+                i = i + 1;
+            }
+        
+        document.getElementById("wordcount").innerHTML = sum;
+        console.log(res, i, res.length);}
+    </script> -->
+</body>
+
+</html>

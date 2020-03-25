@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var visitorname;
+        var visitorage;
+        visitorname = prompt("Write your name");
+        visitorage = prompt("How old are you?");
+        document.write("Welcome our page " + visitorname + "! who is " + visitorage + " years old.");
+    </script>
+    <h3> Data types</h3>
+    <p><b>What is the typa of the following JavaScript Variables?</b></p>
+    <p>
+        var number1 = 12.34; <br>
+        var number2 = 1234; <br>
+        var bigNumber = 123e4; <br>
+        var smallNumber = 123e-4; <br>
+        var firstName = "MyFirstName"; <br>
+        var lastName = 'MyFLastName'; <br>
+        var message = "It's alright"; <br>
+        var p = true; <br>
+        var q = false; <br>
+        var myBool = true; <br>
+        var myString = "true"; <br>
+        var myAge; <br>
+    </p>
+    <p><b>In your browser, open More tools -- Developer tools -- Console to see the results!</b></p>
+    <script>
+        var number1 = 12.34;
+        var number2 = 1234;
+        var bigNumber = 123e4; /*1230000*/
+        var smallNumber = 123e-4; //0.0123
+        var firstName = "MyFirstName"; /*MyFirstName*/
+        var lastName = 'MyFLastName'; //MyFLastName
+        var message = "It's alright"; //It's alright
+        var p = true;
+        var q = false;
+        var myBool = true; /*Boolean type*/
+        var myString = "true"; //String type
+        var myAge; //undefined
+        console.log("number1 is type: " + typeof (number1));
+        console.log("number2 is type: " + typeof (number2));
+        console.log("bigNumber is type: " + typeof (bigNumber));
+        console.log("smallNumber is type: " + typeof (smallNumber));
+        console.log("firstName is type: " + typeof (firstName));
+        console.log("lastName is type: " + typeof (lastName));
+        console.log("message is type: " + typeof (message));
+        console.log("p is type: " + typeof (p));
+        console.log("q is type: " + typeof (q));
+        console.log("myBool is type: " + typeof (myBool));
+        console.log("myString is type: " + typeof (myString));
+        console.log("myAge is type: " + typeof (myAge));
+    </script>
+
+    <script>
+        var a = 10;
+        var b = 3;
+
+        var x = a + b;
+        var y = a % b;
+        var z = a * b;
+
+        console.log("x = " + x);
+        console.log("y = " + y);
+        console.log("z = " + z);
+    </script>
+
+    <h3> String and Number methods</h3>
+    <p><b>What is the the result of the following code?</b></p>
+    <p>
+        var str = "HTML, CSS, JavaScript"; <br>
+        var sln = str.length; <br>
+        var pos = str.indexOf("C"); <br>
+        var res = str.slice(6, 9); <br>
+        var a = 12.345; <br>
+        var x = a.toPrecision(3); <br>
+        var y = Math.sqrt(16); <br>
+        var z = Math.random()*10; <br>
+        var randomInt = parseInt(z) <br>
+    </p>
+    <p><b>In your browser, open More tools -- Developer tools -- Console to see the results!</b></p>
+    <script>
+        var str = "HTML, CSS, JavaScript";
+        var sln = str.length; /* 21 */
+        var pos = str.indexOf("C"); /* 6 */
+        var res = str.slice(6, 9); /* CSS */
+        var a = 12.345;
+        var x = a.toPrecision(3); /* 12.3 */
+        var y = Math.sqrt(16);  /* 4 */
+        var z = Math.random() * 10; /* */
+        var randomInt = parseInt(z)  /* an integer between 0 and 9 */
+
+        console.log("The length of the string is: " + sln);
+        console.log("The position of the first 'C' is:  " + pos);
+        console.log("The part of the string between position 6 and position 9 is: " + res);
+        console.log("x = " + x);
+        console.log("y = " + y);
+        console.log("z = " + z);
+        console.log("randomInt = " + randomInt);
+    </script>
+
+</body>
+
+</html>

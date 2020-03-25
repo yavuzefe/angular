@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        canvas{border: 1px solid navy;}
+    </style>
+</head>
+<body>
+
+    <canvas id="mycanvas1" width="600" height="400"></canvas>
+    <canvas id="mycanvas2"  width="600" height="400"></canvas>
+
+
+<script>
+
+    var canvas1 = document.getElementById("mycanvas1");
+    var context1 = canvas1.getContext('2d');
+    var canvas2 = document.getElementById("mycanvas2");
+    var context2 = canvas2.getContext("2d");
+
+    context1.fillStyle = "red";
+    context1.strokeStyle = "red";
+    context1.font = "4em Calibri";
+    context1.strokeText("TEXT!", 100, 200);
+    context1.lineWidth = "3px";
+    context1.beginPath();
+    context1.moveTo(0, 0);
+    context1.lineTo(context1.canvas.width, context1.canvas.height);
+    context1.moveTo(0, context1.canvas.height);
+    context1.lineTo(context1.canvas.width, 0);
+    context1.stroke();
+
+    var image1 = new Image();
+    image1.src = ("leChocolat/images/logo.png");
+    image1.onload = function () {
+        context1.drawImage(image1, 220, 0);
+    }
+
+    context2.fillStyle = "blue";
+    context2.font = "3em Calibri";
+    context2.fillText("My TEXT!", 30, 110);
+</script>
+</body>
+</html>

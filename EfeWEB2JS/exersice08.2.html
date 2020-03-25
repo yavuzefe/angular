@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Styling the form </title>
+        <style>
+            h3 {
+                color: #6E3F19;
+                font-size:1.6em;
+            }
+            #fieldset {
+                color: #6E3F19;
+                font-size:1.2 em;
+                font-weight: bold;
+                background: #F5F5DC;
+            }  
+            input[type=submit] {
+                width: 16%;
+                background-color: #6E3F19;
+                color: #F5F5DC;
+                padding: 14px 5px 14px 5px; 
+                border-style : 2px dashed; 
+                border-color: rgb(162, 101, 52);
+                border-radius:18px;
+            }
+            .required label:after { content:"*"; }
+            .required p:after { content:"*"; }
+        </style>
+    </head>
+    <body >
+        <h3>Styling the form </h3>
+        <form id="form" >
+            <fieldset id="fieldset">
+                <legend>Please fill in the following information:</legend><br/>
+                <div class = "required">
+                    <label for="firstname">First name:</label>
+                    <input type="text" name="firstname" id="firstname" class = "required" 
+                        placeholder="Your first name goes here" 
+                        autofocus="autofocus" required /> 
+                </div>
+                <br>
+                <div class = "required">
+                    <label for="mail">Your email:</label>
+                    <input type="email" name="mail" id="mail" 
+                        placeholder="Your email goes here" required />
+                </div>
+                <br>
+                <div class = "required">
+                <p>Please enter any feedback you have.</p>
+                    <textarea name="feedback"  id="feedback"  
+                        placeholder ="Your feedabck goes here"   
+                        rows="3" cols="60" reqired></textarea>
+                </div>
+                <br>
+            </fieldset><br>
+            <label for="submit">Click to submit: </label> <input type="submit" id="submit"/> <br>
+        </form>
+    </body>
+</html>
+

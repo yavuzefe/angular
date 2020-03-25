@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        for (var i = 0; i <= 100; i++) {
+            if (i % 2 == 1) {
+                console.log(i);
+            }
+        }
+
+        var j = 0, sum = 0;
+        while (sum <= 100) {
+            /*here we increment i, then add it to sum*/
+            j = j + 1;
+            sum = sum + j;
+            document.write(j);
+            document.write(sum);
+        }
+
+                /*the loop exits when sum reaches or exceeds 100*/
+                console.log("We added up to "+j+" to get to 100");
+    </script>
+</body>
+
+</html>

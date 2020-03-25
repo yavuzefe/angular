@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     function myObject (n,a,j) { 
+this.name= n; 
+this.age = a; 
+this.job=j; 
+this.nameAge = function(){
+                return this.name + " " + this.age;
+    }
+}  
+var student1 = new myObject("Aris","24");
+
+var student2 = new myObject("Peter","24");
+
+student1.hobby = "cinema";
+
+student1.addMethod = function () { return this.job + " " + this.hobby; };
+ 
+    </script>
+</body>
+</html>

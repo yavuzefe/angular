@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Keyboard Events</title>
+  </head>
+  <body>
+    <h1>Keyboard Events</h1>
+    <p id="p1">Press the right (left) arrow on your keyboard!</p>
+
+
+    <script>
+        let number = 5;
+        document.addEventListener("keydown", change, false);
+        function change(evt) {
+            if (evt.which == 39 || evt.keyCode == 39) {   // right arrow
+                number = number + 10;
+                if (number > 255) { number = 255; }
+                console.log(number);
+            } else if (evt.which == 37 || evt.keyCode == 37) {  // left arrow
+                number = number - 10;
+                if (number < 0) { number = 0; }
+                console.log(number);
+            }
+            document.getElementById("p1").style.color = "rgb(" + number + " , 255 , 255)" ;
+        }
+    </script>
+  </body>
+</html>

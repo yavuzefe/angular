@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Creating and inserting DOM elements</title>
+    <style>
+      .className {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Creating and inserting DOM elements</h1>
+    <ol>
+      <li>Ordered listItem 0</li>
+      <li>Ordered listItem 1</li>
+      <li>Ordered listItem 2</li>
+      <li>Ordered listItem 3</li>
+    </ol>
+    <ul>
+      <li>Unordered listItem 0</li>
+      <li>Unordered listItem 1</li>
+      <li>Unordered listItem 2</li>
+      <li>Unordered listItem 3</li>
+    </ul>
+
+    <script>
+        
+      let h3ToAdd = document.createElement("h3");   //Create a new h3 tag
+      let texth3ToAdd = document.createTextNode("I'm created with DOM as new h3 tag");   //create a new text node for the h3 tag
+      h3ToAdd.appendChild(texth3ToAdd);    // append the text node on the h3 tag
+      let posh3 = document.getElementsByTagName("ol")[0];   // We will add the new h3 tag before the ol of the html document   
+      document.body.insertBefore(h3ToAdd, document.body.children[1]);  //We add the new h3 tag before the ol  
+
+      
+      let listItemToAdd = document.createElement("LI"); //Create a new list item
+      let textlistItemToAdd = document.createTextNode("I'm created with DOM as new list item"); //create a new text node for the list item
+      listItemToAdd.appendChild(textlistItemToAdd);   // append the text node on the list item
+
+      let pos = document.getElementsByTagName("ol")[0];    // We will add the new list item into the first ol of the html document
+      pos.insertBefore(listItemToAdd, pos.childNodes[1]);    //We add the new list item on the begining of the ol
+      
+      let newClass = document.createAttribute("class");    // We create a class with name className
+      newClass.value = "className";
+      listItemToAdd.setAttributeNode(newClass);   //We apply the class on the new list item. So the defined color is applied
+    </script>
+  </body>
+</html>

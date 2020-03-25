@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Nodes</title>
+  </head>
+  <body>
+    <div>
+      <h1 id="myH1">Nodes</h1>
+      <h3>Dom Tree - H2 Tag</h3>
+      <p>Paragraph</p>
+      <ul id="myul">
+        <li id="myli">Unordered listItem 1</li>
+        <li>Unordered listItem 1</li>
+        <li>Unordered listItem 2</li>
+      </ul>
+    </div>
+    <script>
+      let x = document.getElementById("myH1");
+      let myul = document.getElementById("myul");
+      let myli = document.getElementById("myli");
+      console.log("The node type of document is: " + document.nodeType)
+      console.log("The node type of H1 is: " + x.nodeType);
+      console.log("The length of childNodes of H1 is: " + x.childNodes.length);
+      console.log("The length of children of H1 is: " + x.children.length);
+      console.log("The next slibing of H1: " + x.nextSibling);
+      console.log("The parentElement of H1: " + x.parentElement);
+
+      console.log("The node type of myul is: " + myul.nodeType);
+      console.log("The length of childNodes of myul is: " + myul.childNodes.length);
+      console.log("The length of children of myul is: " + myul.children.length);
+      console.log("The next slibing of myul: " + myul.nextSibling);
+      console.log("The parentElement of myul: " + myul.parentElement);
+      
+      console.log("The node type of myli is: " + myli.nodeType);
+      console.log("The length of childNodes of myli is: " + myli.childNodes.length);
+      console.log("The length of children of myli is: " + myli.children.length);
+      console.log("The next slibing of myli: " + myli.nextSibling);
+      console.log("The parentElement of myli: " + myli.parentElement);
+    </script>
+  </body>
+</html>

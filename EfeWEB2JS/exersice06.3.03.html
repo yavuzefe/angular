@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>The Temperature Converter</h3>
+    <p>(<sup>o</sup>C * 9/5) + 32= <sup>o</sup> F <br>
+        (<sup>o</sup>F-32) * 5/9 = <sup>o</sup>C</p>
+    <p> <input id="inputC" size="3"> <sup>o</sup>C = <span id="outputF"></span> <sup>o</sup> F <br>
+        <!-- <input id="inputF" type="number" max="3"> <sup>o</sup>F = <span id="outputC"></span><sup>o</sup> C -->
+    </p>
+    <script>
+        var convertCtoF = document.getElementById(inputC);
+        convertCtoF.onchange = function () {
+            var outputFv = (convertCtoF *(9/5)) + 32;
+            document.getElementById("outputF").innerHTML = outputFv;
+        }
+        // var inputFv = document.getElementById("inputF");
+        // inputFv.onchange = function () {
+        //     outputC = (inputFv - 32) * 5 / 9;
+        //     document.getElementById(outputC).innerHTML = outputF
+        // }
+    </script>
+</body>
+
+</html>

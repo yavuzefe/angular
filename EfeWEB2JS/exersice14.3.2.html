@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Capturing and Bubbling</title>
+    <style>
+      #secondDiv {
+        background: red;
+      }
+      #firstDiv {
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="firstDiv">
+        <p>Some text</p>
+        <br />
+        <div id="secondDiv">
+            <div id="thirdDiv">
+                Click me!
+            </div>
+            <br>
+        </div>
+        <br>
+    </div>
+
+    <script>
+      document.getElementById("firstDiv").addEventListener("click", myfunctiona, true);
+      function myfunctiona() {
+        alert("Hello, I am the first outer green div!");
+      }
+      document.getElementById("secondDiv").addEventListener("click", myfunctionc, true);
+      function myfunctionc() {
+        alert("Hello,I am the second red div!");
+      }
+      document.getElementById("thirdDiv").addEventListener("click", myfunctionb, true);
+      function myfunctionb() {
+        alert("I am the text in the third div!");
+      }
+    </script>
+  </body>
+</html>

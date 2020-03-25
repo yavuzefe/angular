@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Constructor syntax</title>
+</head>
+<body>
+    <h1>Constructor syntax</h1>
+    <script>
+       // Create your own Construction function
+       // https://elearn.ellak.gr/mod/book/view.php?id=5482
+        function markets (prd,pn,pp){
+            this.product = prd;
+            this.pname = pn;
+            this.pprice = pp;
+        }
+        
+       // Use the new keyword to define two new objects via the Construction function
+       var sklvnts = new markets("soap","Duru","2 Euro");
+       var lidl = new markets ("soap","HS","3 Euro");
+       
+       // Use the document.write to appear these objects to the browser
+       document.write("In Sklavenitis " + sklvnts.pname + " " + sklvnts.product+ " price is: " + sklvnts["pprice"]);
+       document.write("<br>");
+       document.write("In Lidl " + lidl.pname + " " + lidl["product"] + " price is: " + lidl["pprice"] );
+       
+       //Iterate over the first object to extract its values to the console
+       // https://elearn.ellak.gr/mod/book/view.php?id=5481&chapterid=3715
+
+       for (var values in sklvnts){
+           console.log(sklvnts[values]);
+       }
+       
+
+    </script>
+</body>
+</html> 

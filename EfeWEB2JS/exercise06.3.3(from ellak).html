@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<span ><sup>o</sup>C x 9/5 + 32 = <sup>o</sup>F<br>
+    <br>
+(<sup>o</sup>F - 32) x 5/9 = <sup>o</sup>C</span><br>
+<br>
+
+<input size="3" id="inputC"><sup>o</sup>C is equal to <span id="outputF"></span><sup>o</sup>F
+<script>
+    var convertCtoF = document.getElementById("inputC");
+    convertCtoF.onchange = function(){ 
+        var degreesC = document.getElementById("inputC").value; 
+        if (isNaN(degreesC)) { 
+            document.getElementById("outputF").innerHTML = "I can't convert to " 
+        } else {
+            var degreesF = (degreesC*(9/5))+32; 
+            document.getElementById("outputF").innerHTML = degreesF;
+        }
+    }
+</script>
+</body>
+</html>

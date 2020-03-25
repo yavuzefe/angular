@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function myObject (n,s,a,j) { 
+this.name= n; 
+this.lname=s;
+this.age = a; 
+this.job=j; 
+this.nameAge = function(){
+                return this.name + " " + this.age;
+    }
+}
+var student1 = new myObject("Helen");
+var student2 = new myObject("Aris","24");
+console.log(student2.nameAge());//Aris 24
+var me = new myObject ("Vasilis","Wilson","a","Sous-chef");  //An object creation
+var you = new myObject ("The","Student","a","WEb Developer");  //Another object creation
+        document.write("First Name: " + me.name + " , Last Name: " + me["lname"] + " ,  Job: " + me["job"] );
+        document.write("<br>");
+        document.write("Full name: " + you.nameAge() + ", Job: " +you.job );
+
+
+    </script>
+</body>
+</html>
