@@ -1,14 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Dish } from '../shared/dish';
 
-@Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
-})
-export class MenuComponent implements OnInit {
-
-  dishes: Dish[] = [
+  const DISHES: Dish[] = [
     {
       name: '85% Dark Chocolate',
       image: '/assets/images/dark85.jpg',
@@ -42,6 +35,17 @@ export class MenuComponent implements OnInit {
       description: 'Chocolates of different cocoa beans concentration containing almonds. They are crunchy and have a rich taste.',
     }
   ];
+
+@Component({
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.css']
+})
+export class MenuComponent implements OnInit {
+
+  dishes = DISHES;
+  selectedDish = DISHES[0];
+
 
   constructor() { }
 
