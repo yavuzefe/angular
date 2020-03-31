@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { DishService } from './services/dish.service';
 import { DishsetailComponent } from './menu/dishsetail/dishsetail.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    DishsetailComponent
+    DishsetailComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
