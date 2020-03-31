@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
+import { LeaderService } from './services/leader.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { DishdetailComponent } from './dishdetail/dishdetail.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [DishService],
+  providers: [DishService, LeaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
