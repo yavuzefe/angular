@@ -12,16 +12,10 @@ import { from } from 'rxjs';
 })
 export class AboutComponent implements OnInit {
 
-  leader: Leader;
-  constructor(private leaderservice: LeaderService,
-    private route: ActivatedRoute,
-    private location: Location) { }
+  leaders: Leader[];
+  constructor(private leaderservice: LeaderService) { }
   ngOnInit() {
-    const id = +this.route.snapshot.params['id'];
-    this.leader = this.leaderservice.getLeader(id);
+    this.leaders = this.leaderservice.getLeaders();
  }
-  goBack(): void {
-    this.location.back();
-  }
   
 }
