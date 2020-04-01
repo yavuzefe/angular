@@ -2,23 +2,21 @@ import { Injectable } from '@angular/core';
 import { Dish } from '../shared/dish';
 import { DISHES } from '../shared/dishes';
 import { Observable } from 'rxjs';
-// import 'rxjs/add/operators/delay';
-// import 'rxjs/add/observable/of';
-// import 'rxjs-compat/add/observable/of';
-
 import { of as ObservableOf } from 'rxjs';
 import { delay } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
+import { baseURL } from '../shared/baseurl';
+
 
 @Injectable()
 export class DishService {
 
-  constructor() { }
-
+  constructor(private http: HttpClient) { }
   getDishes(): Observable< Dish[]> {
-    return ObservableOf(DISHES).pipe(delay(2000));
+    return this.http.get<Dish[]>(baseURL + "dishes");
   }
 
   getDish(id: number): Observable<Dish> {
-    return ObservableOf(DISHES.filter((dish) => (dish.id === id))[0]).pipe(delay(2000));
+    return this.http.get<Dish>(baseURL + "dishes/" + id);
   }
 }
