@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row ">
+        <div class="col-12">
+
+
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Feedback</h4>
+                    <ul class="list-group list-group-flush" *ngFor="let feedback of feedbacks">
+                        <li class="list-group-item"><b>{{feedback.firstname}}</b> <br>
+                            {{feedback.lastname}} <br>
+                            <span>-- {{feedback.message}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
