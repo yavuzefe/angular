@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Leader } from '../shared/leader';
-import { LEADERS } from '../shared/leaders';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { baseURL } from '../shared/baseurl';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class LeaderService {
 
-  constructor() { }
-  getLeaders(): Leader[] {
-    return LEADERS;
+  constructor(private http: HttpClient) { }
+  getLeaders(): Observable<Leader[]> {
+    return this.http.get<Leader[]>(baseURL + "leaders");
   }
 
-  getLeader(id: number): Leader {
-    return LEADERS.filter((leader) => (leader.id === id))[0];
+  getLeader(id: number): Observable<Leader> {
+    return this.http.get<Leader>(baseURL + "leaders/" + id);
   }
 }

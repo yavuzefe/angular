@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>#fieldset {
+        color: #6E3F19;
+        font-size:1.2 em;
+        font-weight: bold;
+        background: #F5F5DC;
+      } 
+      input[type=submit] {
+  width: 16%;
+  background-color: #6E3F19;
+  color: #F5F5DC;
+  padding: 10px 5px 10px 5px; 
+  border-style : 2px dashed; 
+  border-color: rgb(162, 101, 52);
+  border-radius:18px;
+ }
+</style></head>
+
+<body>
+    <h1>The HTML of Forms</h1>
+    <form action="#" method="POST">
+        <fieldset id="fieldset">
+            <legend>Please, fill in the following information:</legend>
+            <label for="fname">First name:</label>
+            <input type="text" minlength="4" name="fname" id="fname" required autofocus
+            placeholder="Your name goes here"><br><br>
+            <label for="password">Your password:</label>
+            <input type="password" name="password" id="password" required
+            placeholder="Your password goes here"><br><br>
+            <label for="feedback">Please enter any feedback you have:</label><br><br>
+            <textarea minlength="4" rows="5" cols="50" name="feedback"></textarea><br><br>
+        </fieldset><br><br>
+        <label for="submit">Click to submit:</label>    
+        <input type="submit" id="submit">
+    </form>
+</body>
+</html>
