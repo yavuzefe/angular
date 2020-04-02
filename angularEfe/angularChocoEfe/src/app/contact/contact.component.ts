@@ -33,6 +33,7 @@ onSubmitFeedback() {
   this.fb = this.feedbackForm.value;
   console.log(this.fb);
   this.feedbacks.push(this.fb);
+  this.feedBackService.addFeedbacks(this.fb).subscribe(fb => this.feedbacks.push(this.fb));
   this.feedbackForm.reset({
     firstname: '',
     lastname: '',
