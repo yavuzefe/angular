@@ -12,6 +12,7 @@ export class ContactComponent implements OnInit {
   feedbacks: Feedback[];
   feedbackForm: FormGroup;
   fb: Feedback;
+  
 
   constructor(private feedBackService: FeedbackService,
   @Inject ('BaseURL') public BaseURL,
@@ -26,19 +27,23 @@ createForm() {
   this.feedbackForm = this.fbformbuilding.group({
     firstname: '',
     lastname: '',
-    message: ''
+    message: '',
   });
+  
 }
 onSubmitFeedback() {
   this.fb = this.feedbackForm.value;
+  this.fb.date = new Date;
+  console.log(this.fb.date);
   console.log(this.fb);
-  this.feedbacks.push(this.fb);
   this.feedBackService.addFeedbacks(this.fb).subscribe(fb => this.feedbacks.push(this.fb));
   this.feedbackForm.reset({
     firstname: '',
     lastname: '',
-    message: ''
+    message: '',
+    
   });
+  
 }
 
 }
