@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { baseURL } from './shared/baseurl';
 import { ContactComponent } from './contact/contact.component';
 import { FeedbackService } from './services/feedback.service';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { FeedbackService } from './services/feedback.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [DishService, 
     LeaderService,
